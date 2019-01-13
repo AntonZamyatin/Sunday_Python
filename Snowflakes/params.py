@@ -1,6 +1,6 @@
 """File with parameters and constants."""
 
-SIZE = WIDTH, HIGTH = 800, 600
+SIZE = WIDTH, HIGTH = 800, 800
 F_SIZE = 600, 600
 CELL_WIDTH = 5
 DELAY = 10

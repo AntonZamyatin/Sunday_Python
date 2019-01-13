@@ -38,6 +38,9 @@ while True:
                 print("Start")
             else:
                 print("Stop")
+        if event.type == pygame.KEYDOWN and\
+           pygame.key.get_pressed()[pygame.K_BACKSPACE]:
+            Field.clear()
 
     if start and pygame.time.get_ticks() - last > DELAY:
         last = pygame.time.get_ticks()

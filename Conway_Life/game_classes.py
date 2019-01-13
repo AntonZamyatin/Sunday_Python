@@ -59,10 +59,13 @@ class Field(object):
 
         self.array = self.tmp
 
+    def clear(self):
+        self.array = np.zeros((self.width, self.higth), dtype=int)
+
     def draw(self):
         """Method. Draws current field state."""
         self.screen.fill(black)
-        self.draw_grid(d_green)
+        #self.draw_grid(d_green)
 
         def new_rect(color, x, y):
             pygame.draw.rect(self.screen, color,
@@ -74,7 +77,7 @@ class Field(object):
         for x in range(self.width):
             for y in range(self.higth):
                 if self.array[x, y] == 33:
-                    new_rect(green, x, y)
+                    new_rect(blue, x, y)
                 elif self.array[x, y] > 30:
                     new_rect(green2, x, y)
                 elif self.array[x, y] > 25:
